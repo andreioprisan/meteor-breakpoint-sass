@@ -1,16 +1,13 @@
 Package.describe({
 	name: "andreioprisan:breakpoint-sass",
 	summary: "Breakpoint with Sass support",
-	version: "1.0.2",
+	version: "1.1.0",
 	git: "https://github.com/andreioprisan/meteor-breakpoint-sass.git"
 });
 
 Package.onUse(function (api) {
-	api.versionsFrom("METEOR@1.0");
-
-	api.use("jquery");
-	api.use("fourseven:scss@3.2.0", ["server"]);
-	api.imply("fourseven:scss", ["server"]);
+	api.versionsFrom("METEOR@1.2");
+	api.use("fourseven:scss@3.4.1");
 
 	api.addFiles([
 		"assets/stylesheets/_breakpoint.scss",
@@ -32,7 +29,5 @@ Package.onUse(function (api) {
 		"assets/stylesheets/breakpoint/parsers/resolution/_resolution.scss",
 		"assets/stylesheets/breakpoint/parsers/single/_default.scss",
 		"assets/stylesheets/breakpoint/parsers/triple/_default.scss"
-	], "server", {
-    	isAsset: true
-  	});
+	], 'client', { isImport: true });
 });
