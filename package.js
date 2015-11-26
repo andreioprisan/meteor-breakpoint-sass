@@ -29,5 +29,5 @@ Package.onUse(function (api) {
 		"assets/stylesheets/breakpoint/parsers/resolution/_resolution.scss",
 		"assets/stylesheets/breakpoint/parsers/single/_default.scss",
 		"assets/stylesheets/breakpoint/parsers/triple/_default.scss"
-	], 'client', { isImport: true });
+	], "client", { isImport: true });
 });
